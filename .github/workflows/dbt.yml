@@ -1,4 +1,4 @@
-name: dbt_test_base_tbl_zero_row_counts
+name: dbt_tests
 on: [push]
 
 env:
@@ -14,7 +14,7 @@ env:
 
 jobs:
   dbt:
-    name: dbt
+    name: test_base_tbl_zero_row_counts
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
