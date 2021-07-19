@@ -21,9 +21,9 @@ This demo makes use of DBT tests as a basis for integration testing for CI/CD, w
 To see the logic of the CI/CD activities, see: `.github/workflows/dbt.yml`. Where at a high-level, the following is happening:
 
 * A series of DBT tests are run, to ensure the base tables within the curated db don't contain 0 row counts. This is done using the command:
-`dbt test --data --profiles-dir profiles --models ${DBT_MODEL}`
+`dbt test --data --profiles-dir profiles --models ${DBT_CURATED_MODEL}`
 * If these tests are successful, then the presentation layer table (within the `analytics_db` model) is created, using the following command:
-`dbt run --profiles-dir profiles --models analytics_db`
+`dbt run --profiles-dir profiles --models ${DBT_ANALYTICS_MODEL}`
 
 This GitHub action could be customised further, e.g. to only be triggered by changes to certain file extensions (see [GitHub event triggers](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)). However for demo purposes, this DBT test is run each time code is pushd to the Git repo.
 
