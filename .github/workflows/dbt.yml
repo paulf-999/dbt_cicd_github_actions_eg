@@ -25,4 +25,4 @@ jobs:
       - run: dbt --version
       - run: cd bin/${DBT_PROJECT_NAME} && dbt debug --profiles-dir profiles
       - run: cd bin/${DBT_PROJECT_NAME} && dbt test --data --profiles-dir profiles --models ${DBT_MODEL}
-      - run: cd bin/${DBT_PROJECT_NAME} && dbt run --profiles-dir profiles --models ${DBT_MODEL}
+      - run: cd bin/${DBT_PROJECT_NAME} && dbt run --profiles-dir profiles --models analytics_db
