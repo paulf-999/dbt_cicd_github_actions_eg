@@ -25,8 +25,7 @@ To see the logic of the CI/CD activities, see: `.github/workflows/dbt.yml`. Wher
 * If these tests are successful, then the presentation layer table (within the `analytics_db` model) is created, using the following command:
 `dbt run --profiles-dir profiles --models analytics_db`
 
-This GitHub action could be customised further, to only be invoked on a push to a given Git branch. However for demo purposes, this DBT test is run each time code is pushd to the Git repo.
-
+This GitHub action could be customised further, e.g. to only be triggered by changes to certain file extensions (see [GitHub event triggers](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)). However for demo purposes, this DBT test is run each time code is pushd to the Git repo.
 
 ##### Technologies used
 * GitHub actions for CI / CD
