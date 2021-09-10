@@ -50,5 +50,5 @@ To make use of the example unit tests used for GitHub actions integration testin
 
 ## For reference:
 
-For an example of how to use GitHub actions to run DBT, see: https://gist.github.com/troyharvey/d61ebe704395c925bf9448183e99af3e
-For an overview of GitHub secrets (for GitHub actions), see: https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository
+* For an example of how to use GitHub actions to run DBT, see: https://gist.github.com/troyharvey/d61ebe704395c925bf9448183e99af3e
+* For an overview of GitHub secrets (for GitHub actions), see: https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository
